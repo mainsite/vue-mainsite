@@ -8,11 +8,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <h3><i class="fa fa-arrow-circle-up"></i> Self-Started</h3>
+          <h3><i class="fa fa-arrow-circle-up"></i> {{navbarHeading}}</h3>
         </div>
         <div id="navbar" class="collapse navbar-collapse navbar-right">
           <ul class="nav navbar-nav">
-            <li><router-link to="/dashboard">Dashboard</router-link></li>
+            <li v-for="link in links"><router-link :to="link.url">{{link.label}}</router-link></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -24,7 +24,11 @@ export default {
   name: 'navbar',
   data () {
     return {
-      navbarHeading: 'Self-Started'
+      navbarHeading: 'Self-Started',
+      links: [
+        {url: '/dashboard', label: "Dashboard"},
+        {url: '/', label: "Home"}
+      ]
     }
   }
 }
@@ -34,5 +38,6 @@ export default {
 <style scoped>
     .navbar {
         color: white;
+        border-radius: 0;
     }
 </style>

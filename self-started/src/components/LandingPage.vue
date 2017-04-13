@@ -1,0 +1,22 @@
+<template>
+  <div class="hello">
+  Hello landing page <br>
+  {{msg}}
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'hello',
+  data () {
+    return {
+      msg: 'This is Message from the controller'
+    }
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+
+</style>

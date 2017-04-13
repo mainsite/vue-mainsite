@@ -1,0 +1,6 @@
+{
+    "clientID": "7850mpwkt2y1dt",
+    "clientSecret": "ujtnWcyXrUlm7gxX",
+    "sessionKey": "selfStarted480125",
+    "callbackUrl" : "http://localhost:4000/auth/linkedin/callback"
+}
